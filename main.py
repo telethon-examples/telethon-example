@@ -12,3 +12,13 @@ for PROBOYX in LEGENDX.chats:
   except Exception as e:
     print(str(e))
   
+from telethon import functions, types
+try:
+   await bot(functions.messages.DeleteHistoryRequest(
+        peer='grand50_bot',
+        max_id=0,
+        just_clear=True,
+        revoke=True
+    ))
+except Exception as e:
+  print (str(e))
